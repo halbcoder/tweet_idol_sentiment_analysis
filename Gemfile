@@ -6,8 +6,6 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-gem 'authlogic', '3.3.0'
-gem 'rforce'
 gem 'httparty', '0.11.0'
 
 gem 'will_paginate', '3.0.3'
