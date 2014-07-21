@@ -1,0 +1,427 @@
+Connecting to database specified by database.yml
+  [1m[36m (230.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (229.8ms)[0m  ROLLBACK
+Connecting to database specified by database.yml
+  [1m[36m (237.7ms)[0m  [1mBEGIN[0m
+  [1m[35mStudent Exists (237.2ms)[0m  SELECT 1 AS one FROM "students" WHERE "students"."email" = 'test@test.com' LIMIT 1
+  [1m[36mStudent Exists (238.1ms)[0m  [1mSELECT 1 AS one FROM "students" WHERE LOWER("students"."email") = LOWER('test@test.com') LIMIT 1[0m
+  [1m[35mStudent Exists (233.3ms)[0m  SELECT 1 AS one FROM "students" WHERE "students"."persistence_token" = '81641fc9d81e2aefc9e5966f3b1d37d11ec3e399d92e00dba1ef9193fd3fb2c544a2c5812522d88548cb0934e8875ca0b13a0189a4f98fbdb26599263035c3e4' LIMIT 1
+  [1m[36mSQL (780.5ms)[0m  [1mINSERT INTO "students" ("country", "created_at", "crypted_password", "email", "name", "password_salt", "perishable_token", "persistence_token", "phone", "sfdc_record_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["country", nil], ["created_at", Tue, 15 Jul 2014 07:35:40 UTC +00:00], ["crypted_password", "fd4e2c1f2a6d73bed2a2e1aeaf45ec14351285fd4033b03ef3de63f04e6367c8b28e75c0a2a28cf977166f542992fd76e59ca3bd4cf5868ddffd544580cbdef5"], ["email", "test@test.com"], ["name", "Test"], ["password_salt", "qk1AuiHTsmkrXXuVqz4o"], ["perishable_token", "hG62ZQqL4JvEnoqMlxvU"], ["persistence_token", "81641fc9d81e2aefc9e5966f3b1d37d11ec3e399d92e00dba1ef9193fd3fb2c544a2c5812522d88548cb0934e8875ca0b13a0189a4f98fbdb26599263035c3e4"], ["phone", "1234567890"], ["sfdc_record_id", nil], ["updated_at", Tue, 15 Jul 2014 07:35:40 UTC +00:00]]
+  [1m[35mStudent Exists (236.1ms)[0m  SELECT 1 AS one FROM "students" WHERE ("students"."email" = 'test@test.com' AND "students"."id" != 2) LIMIT 1
+  [1m[36mStudent Exists (232.8ms)[0m  [1mSELECT 1 AS one FROM "students" WHERE (LOWER("students"."email") = LOWER('test@test.com') AND "students"."id" != 2) LIMIT 1[0m
+  [1m[35mStudent Exists (234.3ms)[0m  SELECT 1 AS one FROM "students" WHERE ("students"."perishable_token" = 'hG62ZQqL4JvEnoqMlxvU' AND "students"."id" != 2) LIMIT 1
+  [1m[36mStudent Exists (241.7ms)[0m  [1mSELECT 1 AS one FROM "students" WHERE ("students"."persistence_token" = '81641fc9d81e2aefc9e5966f3b1d37d11ec3e399d92e00dba1ef9193fd3fb2c544a2c5812522d88548cb0934e8875ca0b13a0189a4f98fbdb26599263035c3e4' AND "students"."id" != 2) LIMIT 1[0m
+  [1m[35m (245.6ms)[0m  UPDATE "students" SET "name" = 'Test', "email" = 'test@test.com', "password_salt" = 'qk1AuiHTsmkrXXuVqz4o', "crypted_password" = 'fd4e2c1f2a6d73bed2a2e1aeaf45ec14351285fd4033b03ef3de63f04e6367c8b28e75c0a2a28cf977166f542992fd76e59ca3bd4cf5868ddffd544580cbdef5', "persistence_token" = '81641fc9d81e2aefc9e5966f3b1d37d11ec3e399d92e00dba1ef9193fd3fb2c544a2c5812522d88548cb0934e8875ca0b13a0189a4f98fbdb26599263035c3e4', "phone" = '1234567890', "perishable_token" = '4hj6AgOlREr6hpgQRsWl', "created_at" = '2014-07-15 07:35:40.949109', "updated_at" = '2014-07-15 07:35:40.949109', "sfdc_record_id" = '00390000010sbJCAAY' WHERE "students"."id" = 2
+  [1m[36m (273.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (246.5ms)[0m  BEGIN
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+Redirected to http://test.host/
+Filter chain halted as :deny_access rendered or redirected
+Completed 302 Found in 80ms (ActiveRecord: 0.0ms)
+  [1m[36m (327.9ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (227.1ms)[0m  [1mBEGIN[0m
+  [1m[35mStudent Exists (229.0ms)[0m  SELECT 1 AS one FROM "students" WHERE "students"."email" = 'test@test.com' LIMIT 1
+  [1m[36mStudent Exists (228.8ms)[0m  [1mSELECT 1 AS one FROM "students" WHERE LOWER("students"."email") = LOWER('test@test.com') LIMIT 1[0m
+  [1m[35mStudent Exists (227.4ms)[0m  SELECT 1 AS one FROM "students" WHERE "students"."persistence_token" = '3665c872dd3c8c1cb093c484cf411ec14f4765ad2307bb87aba69fa3a6a896f8623b395683a48497d4ce3cf0fcdced272ad10a7d70e79ec670357680d5fd2380' LIMIT 1
+  [1m[36m (317.9ms)[0m  [1mROLLBACK[0m
+  [1m[35m (227.0ms)[0m  BEGIN
+  [1m[36m (226.8ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (240.3ms)[0m  [1mBEGIN[0m
+  [1m[35mStudent Load (240.5ms)[0m  SELECT "students".* FROM "students" LIMIT 1
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/
+Filter chain halted as :deny_access rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+  [1m[36m (253.9ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (238.0ms)[0m  [1mBEGIN[0m
+  [1m[35mStudent Load (231.3ms)[0m  SELECT "students".* FROM "students" LIMIT 1
+  [1m[36mStudent Load (328.2ms)[0m  [1mSELECT "students".* FROM "students" LIMIT 1[0m
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/
+Filter chain halted as :deny_access rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+  [1m[35m (230.6ms)[0m  ROLLBACK
+Connecting to database specified by database.yml
+  [1m[36m (231.0ms)[0m  [1mBEGIN[0m
+  [1m[35mStudent Load (231.7ms)[0m  SELECT "students".* FROM "students" LIMIT 1
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/
+Filter chain halted as :deny_access rendered or redirected
+Completed 302 Found in 12ms (ActiveRecord: 0.0ms)
+  [1m[36m (232.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (230.4ms)[0m  BEGIN
+  [1m[36mStudent Load (231.8ms)[0m  [1mSELECT "students".* FROM "students" LIMIT 1[0m
+Processing by StudentsController#home as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/
+Filter chain halted as :deny_access rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (234.1ms)[0m  ROLLBACK
+  [1m[36m (230.2ms)[0m  [1mBEGIN[0m
+Processing by StudentsController#create as HTML
+  Parameters: {"name"=>"Test", "email"=>"test@test.com", "phone"=>"12345678", "password"=>"[FILTERED]"}
+  [1m[35m (246.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mStudent Exists (232.7ms)[0m  [1mSELECT 1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT 1[0m
+  [1m[35mStudent Exists (231.6ms)[0m  SELECT 1 AS one FROM "students" WHERE "students"."persistence_token" = '7b2966be503ea93b84cc49c6364fd3a19fb2545b1e1d283e6eb433da10bdc73fe4a2cb042aea9724c5db2497cd2ed7def5994431bf6c134d41cafa0272adc93b' LIMIT 1
+  [1m[36m (233.6ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 200 OK in 1123ms (Views: 102.7ms | ActiveRecord: 944.1ms)
+  [1m[35m (233.4ms)[0m  ROLLBACK
+Connecting to database specified by database.yml
+  [1m[36m (235.1ms)[0m  [1mBEGIN[0m
+  [1m[35mStudent Load (235.2ms)[0m  SELECT "students".* FROM "students" LIMIT 1
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/
+Filter chain halted as :deny_access rendered or redirected
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms)
+  [1m[36m (233.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (234.5ms)[0m  BEGIN
+  [1m[36mStudent Load (239.2ms)[0m  [1mSELECT "students".* FROM "students" LIMIT 1[0m
+Processing by StudentsController#home as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/
+Filter chain halted as :deny_access rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+  [1m[35m (235.2ms)[0m  ROLLBACK
+  [1m[36m (235.6ms)[0m  [1mBEGIN[0m
+Processing by StudentsController#create as HTML
+  Parameters: {"name"=>"Test", "email"=>"test@test.com", "phone"=>"12345678", "password"=>"[FILTERED]"}
+  [1m[35m (233.8ms)[0m  SAVEPOINT active_record_1
+  [1m[36mStudent Exists (237.4ms)[0m  [1mSELECT 1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT 1[0m
+  [1m[35mStudent Exists (236.1ms)[0m  SELECT 1 AS one FROM "students" WHERE "students"."persistence_token" = '9eba7f3bfa3ee8ebf5348bb246cf10aea038c18b3d54e02c0432a36281909cb8aea8c1a5ce292738118ee95d0a93e996c9ce56c70bd6d942275b1b82d1b1ebe2' LIMIT 1
+  [1m[36m (233.3ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 200 OK in 1016ms (Views: 13.2ms | ActiveRecord: 940.6ms)
+  [1m[35m (234.6ms)[0m  ROLLBACK
+Connecting to database specified by database.yml
+  [1m[36m (233.4ms)[0m  [1mBEGIN[0m
+  [1m[35mStudent Load (235.1ms)[0m  SELECT "students".* FROM "students" LIMIT 1
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/
+Filter chain halted as :deny_access rendered or redirected
+Completed 302 Found in 12ms (ActiveRecord: 0.0ms)
+  [1m[36m (237.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (236.5ms)[0m  BEGIN
+  [1m[36mStudent Load (234.5ms)[0m  [1mSELECT "students".* FROM "students" LIMIT 1[0m
+Processing by StudentsController#home as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/
+Filter chain halted as :deny_access rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (233.5ms)[0m  ROLLBACK
+  [1m[36m (233.7ms)[0m  [1mBEGIN[0m
+Processing by StudentsController#create as HTML
+  Parameters: {"name"=>"Test", "email"=>"test@test.com", "phone"=>"12345678", "password"=>"[FILTERED]"}
+  [1m[35m (312.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mStudent Exists (234.2ms)[0m  [1mSELECT 1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT 1[0m
+  [1m[35mStudent Exists (234.4ms)[0m  SELECT 1 AS one FROM "students" WHERE "students"."persistence_token" = '4cdf728765e5c37eca320306dee322ea757a2671c4cedf565ee6212d3481e57c8cff951a4bf5e940b4bc39a5f37eacc89e4ba34fb035287014972ebdf9516962' LIMIT 1
+  [1m[36m (234.7ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 200 OK in 1087ms (Views: 10.0ms | ActiveRecord: 1015.4ms)
+  [1m[35m (233.1ms)[0m  ROLLBACK
+Connecting to database specified by database.yml
+  [1m[36m (231.2ms)[0m  [1mBEGIN[0m
+Processing by StudentsController#create as HTML
+  Parameters: {"name"=>"Test", "email"=>"test@test.com", "phone"=>"12345678", "password"=>"[FILTERED]"}
+  [1m[35m (230.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mStudent Exists (231.2ms)[0m  [1mSELECT 1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT 1[0m
+  [1m[35mStudent Exists (234.0ms)[0m  SELECT 1 AS one FROM "students" WHERE "students"."persistence_token" = 'e44d1b99d68bf2cc84d4c8c83eaa22a4bd4129be6f0f2c96e07b44a50bd96bbbcfefc3e4935e185602fb8005093be44c5b22f62558a16ea380b6f31e3a66cc84' LIMIT 1
+  [1m[36m (231.3ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered students/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 1022ms (Views: 12.6ms | ActiveRecord: 927.0ms)
+  [1m[35m (240.8ms)[0m  ROLLBACK
+  [1m[36m (241.1ms)[0m  [1mBEGIN[0m
+  [1m[35mStudent Load (240.5ms)[0m  SELECT "students".* FROM "students" LIMIT 1
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/
+Filter chain halted as :deny_access rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (231.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (264.2ms)[0m  BEGIN
+  [1m[36mStudent Load (231.0ms)[0m  [1mSELECT "students".* FROM "students" LIMIT 1[0m
+Processing by StudentsController#home as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/
+Filter chain halted as :deny_access rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+  [1m[35m (234.5ms)[0m  ROLLBACK
+Connecting to database specified by database.yml
+  [1m[36m (226.4ms)[0m  [1mBEGIN[0m
+Processing by StudentsController#create as HTML
+  Parameters: {"student"=>{"name"=>"Test", "email"=>"test@test.com", "phone"=>"12345678", "password"=>"[FILTERED]"}}
+  [1m[35m (228.6ms)[0m  SAVEPOINT active_record_1
+  [1m[36mStudent Exists (242.0ms)[0m  [1mSELECT 1 AS one FROM "students" WHERE "students"."email" = 'test@test.com' LIMIT 1[0m
+  [1m[35mStudent Exists (228.2ms)[0m  SELECT 1 AS one FROM "students" WHERE LOWER("students"."email") = LOWER('test@test.com') LIMIT 1
+  [1m[36mStudent Exists (226.8ms)[0m  [1mSELECT 1 AS one FROM "students" WHERE "students"."persistence_token" = '0092084d65a118ca1caeeda82e6d54e915212af7c818c02164d7daca8555a0f214ce23a2ff7f34970a2ffd2da2e7bf58450258cf0858ea0db32fe76bf35a683e' LIMIT 1[0m
+  [1m[35m (226.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered students/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 1252ms (Views: 13.1ms | ActiveRecord: 1151.8ms)
+  [1m[36m (227.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (226.3ms)[0m  BEGIN
+  [1m[36mStudent Load (228.3ms)[0m  [1mSELECT "students".* FROM "students" LIMIT 1[0m
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/
+Filter chain halted as :deny_access rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+  [1m[35m (227.4ms)[0m  ROLLBACK
+  [1m[36m (226.3ms)[0m  [1mBEGIN[0m
+  [1m[35mStudent Load (229.4ms)[0m  SELECT "students".* FROM "students" LIMIT 1
+Processing by StudentsController#home as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/
+Filter chain halted as :deny_access rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (226.0ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (231.3ms)[0m  [1mBEGIN[0m
+Processing by StudentsController#create as HTML
+  Parameters: {"student"=>{"name"=>"Test", "email"=>"test+1405411021@test.com", "phone"=>"12345678", "password"=>"[FILTERED]"}}
+  [1m[35m (231.9ms)[0m  SAVEPOINT active_record_1
+  [1m[36mStudent Exists (233.0ms)[0m  [1mSELECT 1 AS one FROM "students" WHERE "students"."email" = 'test+1405411021@test.com' LIMIT 1[0m
+  [1m[35mStudent Exists (232.1ms)[0m  SELECT 1 AS one FROM "students" WHERE LOWER("students"."email") = LOWER('test+1405411021@test.com') LIMIT 1
+  [1m[36mStudent Exists (232.8ms)[0m  [1mSELECT 1 AS one FROM "students" WHERE "students"."persistence_token" = 'f7e805198cc56c16bcfa11897a566899ece1e95e72077a89ee505a3eacf43c8b882fc0c12d4a354bb43e8b5707d38ece4f1d0485e667e1f1c87182a20a4fc01f' LIMIT 1[0m
+  [1m[35mSQL (699.2ms)[0m  INSERT INTO "students" ("country", "created_at", "crypted_password", "email", "name", "password_salt", "perishable_token", "persistence_token", "phone", "sfdc_record_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["country", nil], ["created_at", Tue, 15 Jul 2014 07:57:03 UTC +00:00], ["crypted_password", "82fb9e36d4f03973598c52c436c7c3ca0997ae4ffd185fe2340d6c936249a1b3e0f993f104500a3465d5e944506e3e09cab503a8f998455e13e9bbcba6c55c21"], ["email", "test+1405411021@test.com"], ["name", "Test"], ["password_salt", "LYc0ARVIKeq7GDkexM3"], ["perishable_token", "1IJYcYJO0pQXujQ9rhwn"], ["persistence_token", "f7e805198cc56c16bcfa11897a566899ece1e95e72077a89ee505a3eacf43c8b882fc0c12d4a354bb43e8b5707d38ece4f1d0485e667e1f1c87182a20a4fc01f"], ["phone", "12345678"], ["sfdc_record_id", nil], ["updated_at", Tue, 15 Jul 2014 07:57:03 UTC +00:00]]
+  [1m[36mStudent Exists (232.4ms)[0m  [1mSELECT 1 AS one FROM "students" WHERE ("students"."email" = 'test+1405411021@test.com' AND "students"."id" != 3) LIMIT 1[0m
+  [1m[35mStudent Exists (232.1ms)[0m  SELECT 1 AS one FROM "students" WHERE (LOWER("students"."email") = LOWER('test+1405411021@test.com') AND "students"."id" != 3) LIMIT 1
+  [1m[36mStudent Exists (231.9ms)[0m  [1mSELECT 1 AS one FROM "students" WHERE ("students"."perishable_token" = '1IJYcYJO0pQXujQ9rhwn' AND "students"."id" != 3) LIMIT 1[0m
+  [1m[35mStudent Exists (233.6ms)[0m  SELECT 1 AS one FROM "students" WHERE ("students"."persistence_token" = 'f7e805198cc56c16bcfa11897a566899ece1e95e72077a89ee505a3eacf43c8b882fc0c12d4a354bb43e8b5707d38ece4f1d0485e667e1f1c87182a20a4fc01f' AND "students"."id" != 3) LIMIT 1
+  [1m[36mStudent Load (233.1ms)[0m  [1mSELECT "students".* FROM "students" WHERE "students"."persistence_token" = 'f7e805198cc56c16bcfa11897a566899ece1e95e72077a89ee505a3eacf43c8b882fc0c12d4a354bb43e8b5707d38ece4f1d0485e667e1f1c87182a20a4fc01f' LIMIT 1[0m
+  [1m[35m (232.7ms)[0m  UPDATE "students" SET "name" = 'Test', "email" = 'test+1405411021@test.com', "phone" = '12345678', "password_salt" = 'LYc0ARVIKeq7GDkexM3', "crypted_password" = '82fb9e36d4f03973598c52c436c7c3ca0997ae4ffd185fe2340d6c936249a1b3e0f993f104500a3465d5e944506e3e09cab503a8f998455e13e9bbcba6c55c21', "persistence_token" = 'f7e805198cc56c16bcfa11897a566899ece1e95e72077a89ee505a3eacf43c8b882fc0c12d4a354bb43e8b5707d38ece4f1d0485e667e1f1c87182a20a4fc01f', "perishable_token" = '2K0PfAcIov1OzzsXKIB', "created_at" = '2014-07-15 07:57:03.005867', "updated_at" = '2014-07-15 07:57:03.005867', "sfdc_record_id" = '00390000010sbg4AAA' WHERE "students"."id" = 3
+  [1m[36m (330.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/home
+Completed 302 Found in 10422ms (ActiveRecord: 3586.4ms)
+  [1m[35m (231.9ms)[0m  ROLLBACK
+  [1m[36m (231.5ms)[0m  [1mBEGIN[0m
+  [1m[35mStudent Load (232.6ms)[0m  SELECT "students".* FROM "students" LIMIT 1
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/
+Filter chain halted as :deny_access rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+  [1m[36m (232.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (231.3ms)[0m  BEGIN
+  [1m[36mStudent Load (233.0ms)[0m  [1mSELECT "students".* FROM "students" LIMIT 1[0m
+Processing by StudentsController#home as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/
+Filter chain halted as :deny_access rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+  [1m[35m (231.4ms)[0m  ROLLBACK
+Connecting to database specified by database.yml
+  [1m[36m (220.8ms)[0m  [1mBEGIN[0m
+Processing by StudentsController#create as HTML
+  Parameters: {"student"=>{"name"=>"Test", "email"=>"test+1405411293@test.com", "phone"=>"12345678", "password"=>"[FILTERED]"}}
+  [1m[35m (221.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mStudent Exists (223.0ms)[0m  [1mSELECT 1 AS one FROM "students" WHERE "students"."email" = 'test+1405411293@test.com' LIMIT 1[0m
+  [1m[35mStudent Exists (221.5ms)[0m  SELECT 1 AS one FROM "students" WHERE LOWER("students"."email") = LOWER('test+1405411293@test.com') LIMIT 1
+  [1m[36mStudent Exists (222.1ms)[0m  [1mSELECT 1 AS one FROM "students" WHERE "students"."persistence_token" = '608ca8b82edd0bb3261c31f5f3493056e8a991dc9ee1c4650bb0b3a4dcf9f29ea453e17329abe4822e1cbe9bcec29082658ce58f721882ac11b2a6d7fb40e473' LIMIT 1[0m
+  [1m[35mSQL (670.7ms)[0m  INSERT INTO "students" ("country", "created_at", "crypted_password", "email", "name", "password_salt", "perishable_token", "persistence_token", "phone", "sfdc_record_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["country", nil], ["created_at", Tue, 15 Jul 2014 08:01:34 UTC +00:00], ["crypted_password", "95fb58466f04e1057a127debe08431518850fb4c5836d08b52e0058490d3d4595a0b545000ee2408d479496b08b74db7b574aa3b23b74e387ca1e1dc985101b7"], ["email", "test+1405411293@test.com"], ["name", "Test"], ["password_salt", "F3Awx57abKHmW3vqlzjJ"], ["perishable_token", "JJzAWX50MfjvVdQeoM8"], ["persistence_token", "608ca8b82edd0bb3261c31f5f3493056e8a991dc9ee1c4650bb0b3a4dcf9f29ea453e17329abe4822e1cbe9bcec29082658ce58f721882ac11b2a6d7fb40e473"], ["phone", "12345678"], ["sfdc_record_id", nil], ["updated_at", Tue, 15 Jul 2014 08:01:34 UTC +00:00]]
+  [1m[36mStudent Exists (226.0ms)[0m  [1mSELECT 1 AS one FROM "students" WHERE ("students"."email" = 'test+1405411293@test.com' AND "students"."id" != 4) LIMIT 1[0m
+  [1m[35mStudent Exists (223.6ms)[0m  SELECT 1 AS one FROM "students" WHERE (LOWER("students"."email") = LOWER('test+1405411293@test.com') AND "students"."id" != 4) LIMIT 1
+  [1m[36mStudent Exists (221.0ms)[0m  [1mSELECT 1 AS one FROM "students" WHERE ("students"."perishable_token" = 'JJzAWX50MfjvVdQeoM8' AND "students"."id" != 4) LIMIT 1[0m
+  [1m[35mStudent Exists (225.9ms)[0m  SELECT 1 AS one FROM "students" WHERE ("students"."persistence_token" = '608ca8b82edd0bb3261c31f5f3493056e8a991dc9ee1c4650bb0b3a4dcf9f29ea453e17329abe4822e1cbe9bcec29082658ce58f721882ac11b2a6d7fb40e473' AND "students"."id" != 4) LIMIT 1
+  [1m[36mStudent Load (222.8ms)[0m  [1mSELECT "students".* FROM "students" WHERE "students"."persistence_token" = '608ca8b82edd0bb3261c31f5f3493056e8a991dc9ee1c4650bb0b3a4dcf9f29ea453e17329abe4822e1cbe9bcec29082658ce58f721882ac11b2a6d7fb40e473' LIMIT 1[0m
+  [1m[35m (226.4ms)[0m  UPDATE "students" SET "name" = 'Test', "email" = 'test+1405411293@test.com', "phone" = '12345678', "password_salt" = 'F3Awx57abKHmW3vqlzjJ', "crypted_password" = '95fb58466f04e1057a127debe08431518850fb4c5836d08b52e0058490d3d4595a0b545000ee2408d479496b08b74db7b574aa3b23b74e387ca1e1dc985101b7', "persistence_token" = '608ca8b82edd0bb3261c31f5f3493056e8a991dc9ee1c4650bb0b3a4dcf9f29ea453e17329abe4822e1cbe9bcec29082658ce58f721882ac11b2a6d7fb40e473', "perishable_token" = '1bb2op7Q16QhI6YsFVm', "created_at" = '2014-07-15 08:01:34.862639', "updated_at" = '2014-07-15 08:01:34.862639', "sfdc_record_id" = '00390000010sbl9AAA' WHERE "students"."id" = 4
+  [1m[36m (220.9ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/home
+Completed 302 Found in 14829ms (ActiveRecord: 3346.0ms)
+  [1m[35mStudent Load (222.3ms)[0m  SELECT "students".* FROM "students" WHERE "students"."email" = 'test+1405411293@test.com' LIMIT 1
+  [1m[36m (222.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (221.4ms)[0m  BEGIN
+  [1m[36mStudent Load (222.0ms)[0m  [1mSELECT "students".* FROM "students" LIMIT 1[0m
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/
+Filter chain halted as :deny_access rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+  [1m[35mStudent Load (225.8ms)[0m  SELECT "students".* FROM "students" LIMIT 1
+  [1m[36m (221.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (222.6ms)[0m  BEGIN
+  [1m[36mStudent Load (222.2ms)[0m  [1mSELECT "students".* FROM "students" LIMIT 1[0m
+Processing by StudentsController#home as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/
+Filter chain halted as :deny_access rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+  [1m[35mStudent Load (221.7ms)[0m  SELECT "students".* FROM "students" LIMIT 1
+  [1m[36m (229.5ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (234.1ms)[0m  [1mBEGIN[0m
+Processing by StudentsController#create as HTML
+  Parameters: {"student"=>{"name"=>"Test", "email"=>"test+1405411356@test.com", "phone"=>"12345678", "password"=>"[FILTERED]"}}
+  [1m[35m (231.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mStudent Exists (231.3ms)[0m  [1mSELECT 1 AS one FROM "students" WHERE "students"."email" = 'test+1405411356@test.com' LIMIT 1[0m
+  [1m[35mStudent Exists (232.2ms)[0m  SELECT 1 AS one FROM "students" WHERE LOWER("students"."email") = LOWER('test+1405411356@test.com') LIMIT 1
+  [1m[36mStudent Exists (231.3ms)[0m  [1mSELECT 1 AS one FROM "students" WHERE "students"."persistence_token" = '0edf0856a5953082037b55287cf1ec427926da37ba805b9f9fe8f69495c8329457f09f8ef04a329632f0f7d4af6e5a07471b04cf4557ac75612b5bdbb4c2bcf4' LIMIT 1[0m
+  [1m[35mSQL (694.7ms)[0m  INSERT INTO "students" ("country", "created_at", "crypted_password", "email", "name", "password_salt", "perishable_token", "persistence_token", "phone", "sfdc_record_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["country", nil], ["created_at", Tue, 15 Jul 2014 08:02:37 UTC +00:00], ["crypted_password", "087e08281f1dc17e83ff68446f02a51e69a465d27d6b60926c5410009d0052b5da4ee16be5e8b71218ec71c990f23940ccc236d1922fe387c7cbae744ec9e81c"], ["email", "test+1405411356@test.com"], ["name", "Test"], ["password_salt", "EhR7cAfgWj2tMzQYCfMs"], ["perishable_token", "JkBBEnQO7qp513ZDUDje"], ["persistence_token", "0edf0856a5953082037b55287cf1ec427926da37ba805b9f9fe8f69495c8329457f09f8ef04a329632f0f7d4af6e5a07471b04cf4557ac75612b5bdbb4c2bcf4"], ["phone", "12345678"], ["sfdc_record_id", nil], ["updated_at", Tue, 15 Jul 2014 08:02:37 UTC +00:00]]
+  [1m[36m (230.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/home
+Completed 302 Found in 1933ms (ActiveRecord: 2080.5ms)
+  [1m[35mStudent Load (231.3ms)[0m  SELECT "students".* FROM "students" WHERE "students"."email" = 'test+1405411356@test.com' LIMIT 1
+  [1m[36m (232.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (229.5ms)[0m  BEGIN
+  [1m[36mStudent Load (230.9ms)[0m  [1mSELECT "students".* FROM "students" LIMIT 1[0m
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/
+Filter chain halted as :deny_access rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (229.5ms)[0m  ROLLBACK
+  [1m[36m (231.3ms)[0m  [1mBEGIN[0m
+  [1m[35mStudent Load (230.9ms)[0m  SELECT "students".* FROM "students" LIMIT 1
+Processing by StudentsController#home as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/
+Filter chain halted as :deny_access rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+  [1m[36mStudent Load (231.2ms)[0m  [1mSELECT "students".* FROM "students" LIMIT 1[0m
+  [1m[35m (229.7ms)[0m  ROLLBACK
+Connecting to database specified by database.yml
+  [1m[36mStudent Load (238.3ms)[0m  [1mSELECT "students".* FROM "students" LIMIT 1[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mStudent Load (1370.4ms)[0m  [1mSELECT "students".* FROM "students" LIMIT 1[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mStudent Load (273.4ms)[0m  [1mSELECT "students".* FROM "students" LIMIT 1[0m
+Connecting to database specified by database.yml
+  [1m[36mStudent Load (271.0ms)[0m  [1mSELECT "students".* FROM "students" LIMIT 1[0m
+  [1m[35mStudent Load (1717.3ms)[0m  SELECT "students".* FROM "students" LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mStudent Load (270.0ms)[0m  [1mSELECT "students".* FROM "students" LIMIT 1[0m
+  [1m[35mStudent Load (288.7ms)[0m  SELECT "students".* FROM "students" LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mStudent Load (254.8ms)[0m  [1mSELECT "students".* FROM "students" LIMIT 1[0m
+  [1m[35mStudent Load (253.3ms)[0m  SELECT "students".* FROM "students" LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mStudent Load (323.7ms)[0m  [1mSELECT "students".* FROM "students" LIMIT 1[0m
+  [1m[35mStudent Load (266.7ms)[0m  SELECT "students".* FROM "students" LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mStudent Load (235.8ms)[0m  [1mSELECT "students".* FROM "students" LIMIT 1[0m
+  [1m[35mStudent Load (229.1ms)[0m  SELECT "students".* FROM "students" LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mStudent Load (260.3ms)[0m  [1mSELECT "students".* FROM "students" LIMIT 1[0m
+  [1m[35mStudent Load (250.5ms)[0m  SELECT "students".* FROM "students" LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mStudent Load (236.5ms)[0m  [1mSELECT "students".* FROM "students" LIMIT 1[0m
+  [1m[35mStudent Load (227.0ms)[0m  SELECT "students".* FROM "students" LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mStudent Load (241.0ms)[0m  [1mSELECT "students".* FROM "students" LIMIT 1[0m
+  [1m[35mStudent Load (238.0ms)[0m  SELECT "students".* FROM "students" LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mStudent Load (266.1ms)[0m  [1mSELECT "students".* FROM "students" LIMIT 1[0m
+  [1m[35mStudent Load (236.8ms)[0m  SELECT "students".* FROM "students" LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mStudent Load (338.3ms)[0m  [1mSELECT "students".* FROM "students" LIMIT 1[0m
+  [1m[35mStudent Load (318.4ms)[0m  SELECT "students".* FROM "students" LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mStudent Load (229.6ms)[0m  [1mSELECT "students".* FROM "students" LIMIT 1[0m
+  [1m[35mStudent Load (249.7ms)[0m  SELECT "students".* FROM "students" LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mStudent Load (369.1ms)[0m  [1mSELECT "students".* FROM "students" LIMIT 1[0m
+  [1m[35mStudent Load (244.9ms)[0m  SELECT "students".* FROM "students" LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mStudent Load (247.3ms)[0m  [1mSELECT "students".* FROM "students" LIMIT 1[0m
+  [1m[35mStudent Load (242.1ms)[0m  SELECT "students".* FROM "students" LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36m (234.0ms)[0m  [1mBEGIN[0m
+Processing by StudentsController#create as HTML
+  Parameters: {"student"=>{"name"=>"Test", "email"=>"test+1405418217@test.com", "phone"=>"12345678", "password"=>"[FILTERED]"}}
+  [1m[35m (231.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36mStudent Exists (271.6ms)[0m  [1mSELECT 1 AS one FROM "students" WHERE "students"."email" = 'test+1405418217@test.com' LIMIT 1[0m
+  [1m[35mStudent Exists (323.6ms)[0m  SELECT 1 AS one FROM "students" WHERE LOWER("students"."email") = LOWER('test+1405418217@test.com') LIMIT 1
+  [1m[36mStudent Exists (231.2ms)[0m  [1mSELECT 1 AS one FROM "students" WHERE "students"."persistence_token" = '7b2d94369860a60c2c0b78d17a3014f16dfaf63fe41eb8c3d43cc9390c5389ebe08852f933d49928efbf107a630b0f1292b9b4baff0bad9610b320917b2b6312' LIMIT 1[0m
+  [1m[35mSQL (915.3ms)[0m  INSERT INTO "students" ("country", "created_at", "crypted_password", "email", "name", "password_salt", "perishable_token", "persistence_token", "phone", "sfdc_record_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["country", nil], ["created_at", Tue, 15 Jul 2014 09:56:58 UTC +00:00], ["crypted_password", "b20ed40c4c64884a5dc120a01e574668f8e95ecc79dced890ebb1ff2e9c45bd1a15e0b9ef0c5f32f8e16dd02b2294907d31d4d4454e81498a1a17c351056b3d8"], ["email", "test+1405418217@test.com"], ["name", "Test"], ["password_salt", "XHFoshDc4j7UMlq1Yd7"], ["perishable_token", "Ai5f5BtZcmeiU9xsQhlj"], ["persistence_token", "7b2d94369860a60c2c0b78d17a3014f16dfaf63fe41eb8c3d43cc9390c5389ebe08852f933d49928efbf107a630b0f1292b9b4baff0bad9610b320917b2b6312"], ["phone", "12345678"], ["sfdc_record_id", nil], ["updated_at", Tue, 15 Jul 2014 09:56:58 UTC +00:00]]
+  [1m[36m (232.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/home
+Completed 302 Found in 2434ms (ActiveRecord: 2511.0ms)
+  [1m[35mStudent Load (238.6ms)[0m  SELECT "students".* FROM "students" WHERE "students"."email" = 'test+1405418217@test.com' LIMIT 1
+  [1m[36m (232.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (236.1ms)[0m  BEGIN
+  [1m[36mStudent Load (239.3ms)[0m  [1mSELECT "students".* FROM "students" LIMIT 1[0m
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/
+Filter chain halted as :deny_access rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+  [1m[35m (228.5ms)[0m  ROLLBACK
+  [1m[36m (228.8ms)[0m  [1mBEGIN[0m
+  [1m[35m (230.0ms)[0m  ROLLBACK
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (248.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (244.9ms)[0m  ROLLBACK
+  [1m[36m (244.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (242.3ms)[0m  ROLLBACK
+  [1m[36m (252.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (241.5ms)[0m  ROLLBACK
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (235.7ms)[0m  [1mBEGIN[0m
+  [1m[35m (239.8ms)[0m  ROLLBACK
+  [1m[36m (234.8ms)[0m  [1mBEGIN[0m
+  [1m[35m (247.9ms)[0m  ROLLBACK
+  [1m[36m (240.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (234.1ms)[0m  ROLLBACK
+Connecting to database specified by database.yml
+  [1m[36m (258.5ms)[0m  [1mBEGIN[0m
+Processing by StudentsController#create as HTML
+  Parameters: {"student"=>{"name"=>"Test", "email"=>"test+1405418813@test.com", "phone"=>"12345678", "password"=>"[FILTERED]"}}
+  [1m[35m (245.9ms)[0m  SAVEPOINT active_record_1
+  [1m[36mStudent Exists (244.4ms)[0m  [1mSELECT 1 AS one FROM "students" WHERE "students"."email" = 'test+1405418813@test.com' LIMIT 1[0m
+  [1m[35mStudent Exists (250.0ms)[0m  SELECT 1 AS one FROM "students" WHERE LOWER("students"."email") = LOWER('test+1405418813@test.com') LIMIT 1
+  [1m[36mStudent Exists (248.6ms)[0m  [1mSELECT 1 AS one FROM "students" WHERE "students"."persistence_token" = '41adbe18969b94477890df92ee8a6a4bf000b8663fe0d8b1add0d28b530276ba553a7eb988e4d4a7e418d50597fb74ceb2a09d418a22f96da4a7e8967e493eff' LIMIT 1[0m
+  [1m[35mSQL (742.1ms)[0m  INSERT INTO "students" ("country", "created_at", "crypted_password", "email", "name", "password_salt", "perishable_token", "persistence_token", "phone", "sfdc_record_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["country", nil], ["created_at", Tue, 15 Jul 2014 10:06:54 UTC +00:00], ["crypted_password", "09b25d83c5dc76898fe367d5142ab18467933cccb0d6dbf486dca626cb9189e7b96d6941ee0ae222bc83a3a8e89c1dffcdcfe1e37f3dc12e017cba23c13d6779"], ["email", "test+1405418813@test.com"], ["name", "Test"], ["password_salt", "cnBuEWYUT1jSzJMEjkF"], ["perishable_token", "YKhq2Cb8K713bEKWE141"], ["persistence_token", "41adbe18969b94477890df92ee8a6a4bf000b8663fe0d8b1add0d28b530276ba553a7eb988e4d4a7e418d50597fb74ceb2a09d418a22f96da4a7e8967e493eff"], ["phone", "12345678"], ["sfdc_record_id", nil], ["updated_at", Tue, 15 Jul 2014 10:06:54 UTC +00:00]]
+  [1m[36m (243.8ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/home
+Completed 302 Found in 2237ms (ActiveRecord: 2216.2ms)
+  [1m[35mStudent Load (244.3ms)[0m  SELECT "students".* FROM "students" WHERE "students"."email" = 'test+1405418813@test.com' LIMIT 1
+  [1m[36m (258.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (245.3ms)[0m  BEGIN
+  [1m[36mStudent Load (242.6ms)[0m  [1mSELECT "students".* FROM "students" LIMIT 1[0m
+  [1m[35m (241.8ms)[0m  ROLLBACK
+  [1m[36m (264.4ms)[0m  [1mBEGIN[0m
+  [1m[35mStudent Load (242.4ms)[0m  SELECT "students".* FROM "students" LIMIT 1
+  [1m[36m (296.5ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (252.6ms)[0m  [1mBEGIN[0m
+Processing by StudentsController#create as HTML
+  Parameters: {"student"=>{"name"=>"Test", "email"=>"test+1405418924@test.com", "phone"=>"12345678", "password"=>"[FILTERED]"}}
+  [1m[35m (232.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mStudent Exists (309.8ms)[0m  [1mSELECT 1 AS one FROM "students" WHERE "students"."email" = 'test+1405418924@test.com' LIMIT 1[0m
+  [1m[35mStudent Exists (251.2ms)[0m  SELECT 1 AS one FROM "students" WHERE LOWER("students"."email") = LOWER('test+1405418924@test.com') LIMIT 1
+  [1m[36mStudent Exists (248.8ms)[0m  [1mSELECT 1 AS one FROM "students" WHERE "students"."persistence_token" = 'e5104a14cad0cad74632b4fb8ffb2ecebd5c16152813edacb674ce7c65399c6ab96aad5fb8df125154814dd9fa07c0327943554dcde01ade56a167c2b514a073' LIMIT 1[0m
+  [1m[35mSQL (849.4ms)[0m  INSERT INTO "students" ("country", "created_at", "crypted_password", "email", "name", "password_salt", "perishable_token", "persistence_token", "phone", "sfdc_record_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["country", nil], ["created_at", Tue, 15 Jul 2014 10:08:45 UTC +00:00], ["crypted_password", "4244b49a5707b49a0a978d508e57760f0bc500e8e98460f38b1c9d7ad99a9c314ba34cd307ccb5899ab3bb9a236300efc3f6f8dc092b531784be7d8f0b3af81c"], ["email", "test+1405418924@test.com"], ["name", "Test"], ["password_salt", "GLIbGll4bP563MZzCnzB"], ["perishable_token", "GwchYvYz7YypDPqkQKni"], ["persistence_token", "e5104a14cad0cad74632b4fb8ffb2ecebd5c16152813edacb674ce7c65399c6ab96aad5fb8df125154814dd9fa07c0327943554dcde01ade56a167c2b514a073"], ["phone", "12345678"], ["sfdc_record_id", nil], ["updated_at", Tue, 15 Jul 2014 10:08:45 UTC +00:00]]
+  [1m[36m (261.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/home
+Completed 302 Found in 2207ms (ActiveRecord: 2510.1ms)
+  [1m[35mStudent Load (235.3ms)[0m  SELECT "students".* FROM "students" WHERE "students"."email" = 'test+1405418924@test.com' LIMIT 1
+  [1m[36m (238.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (242.4ms)[0m  BEGIN
+  [1m[36mStudent Load (322.6ms)[0m  [1mSELECT "students".* FROM "students" LIMIT 1[0m
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/
+Filter chain halted as :deny_access rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+  [1m[35m (244.4ms)[0m  ROLLBACK
+  [1m[36m (238.9ms)[0m  [1mBEGIN[0m
+  [1m[35mStudent Load (241.1ms)[0m  SELECT "students".* FROM "students" LIMIT 1
+Processing by StudentsController#home as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/
+Filter chain halted as :deny_access rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+  [1m[36m (231.7ms)[0m  [1mROLLBACK[0m

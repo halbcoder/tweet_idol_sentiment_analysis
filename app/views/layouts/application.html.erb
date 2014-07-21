@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sentiment Analysis on Tweets</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>    
+  </head>
+    
+    
+  <body id="scroll">
+    
+      <%= render :partial => "layouts/header" %>
+      
+          
+      <% flash.each do |key, value| %>
+        <div class="alert <%= key %>">
+          <%= value %><a class="close" data-dismiss="alert" href="#">&times;</a>
+        </div>
+      <% end %>
+
+      <div id="content">
+        <%= yield %>
+      </div>
+          
+    
+  </body>
+</html>

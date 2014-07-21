@@ -1,0 +1,20 @@
+<nav class="clearfix">
+	<div class="container">
+		<div class="row-fluid">
+			<ul class="span4 nav-left">
+				<li><a href="/home"><i class="fui-home"></i></a></li>
+				<li>
+				
+			  </li>
+			</ul>
+			
+			<div class="pull-right nav-right span8">
+				<ul class="pull-right">	
+				  <% nav_tabs.each do |tab| %>
+				  	<%= tab.html_safe %>
+				  <% end %>
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
