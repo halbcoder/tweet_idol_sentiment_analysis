@@ -21,3 +21,18 @@ test:
   database: test
   username: root
   password: 
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: 5
+  port: 5432
+  host: ec2-107-21-100-118.compute-1.amazonaws.com
+  database: dcg04kf3qdfgho
+  username: nzjagjrhncheid
+  password: L309GBnVwdPqnooWqnrhEz0qFp
+  url: postgres://nzjagjrhncheid:L309GBnVwdPqnooWqnrhEz0qFp@ec2-107-21-100-118.compute-1.amazonaws.com:5432/dcg04kf3qdfgho
+  psql: heroku pg:psql --app tweet-sentiment-idol silver
+  

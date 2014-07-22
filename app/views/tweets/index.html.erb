@@ -13,14 +13,15 @@
   <% end %>
 	
   <br>
-	<div class="span12">
+	<div class="span13">
 		<% if @tweets.present? %>
 			<table id="" class="table table-striped table-hover">
 			  <tr>
-			    <th width="50%">Tweet</th>
-			    <th width="15%">Created at</th>
-			    <th width="15%">Language</th>
-			    <th width="15%">Sentiment</th>
+			    <th width="45%">Tweet</th>
+			    <th width="20%">Created at</th>
+			    <th width="20%">Language</th>
+			    <th width="20%">Sentiment</th>
+          <th width="20%">Sentiment score</th>
 			  </tr>
 			  <% @tweets.each do |tweet| %>
 			    <tr>
@@ -28,6 +29,7 @@
 						<td class="tweet_created"><%= formated_date(tweet.created_at) %></td>						
 						<td class="language capitalize"></td>
 						<td class="sentiment"></td>
+            <td class="sentiment_score"></td>
 			    </tr>
           <% @max_id = tweet.id %>
 			  <% end %>
@@ -46,8 +48,8 @@
       earliestDate: Date.parse('1/12/2013'),
       latestDate: new Date(),
       presetRanges: [      
-        {text: "Last 2 days", dateStart: 'Today-3', dateEnd: 'Today' },
-        {text: "Last 7 days",dateStart: 'Today-8',  dateEnd: 'Today'}
+        {text: "Last 2 days", dateStart: 'Today-3', dateEnd: 'Today-1' },
+        {text: "Last 7 days",dateStart: 'Today-8',  dateEnd: 'Today-1'}
       ],
       presets: {
         dateRange: "Custom filter"
@@ -75,18 +77,20 @@
 	
     $(".language").each(function() {
       $(this)[0].innerHTML = "Loading..."
-      processApi($(this), "identifylanguage")
+      processApi($(this), $(this), "identifylanguage")
     });
     
 
     $(".sentiment").each(function() {
+      score_element = $(this).siblings(".sentiment_score") ;
+      score_element[0].innerHTML = "Loading..."
       $(this)[0].innerHTML = "Loading..."
-      processApi($(this), "detectsentiment")
+      processApi($(this), score_element, "detectsentiment")
 		});
 
   });
 
-  processApi = function(element, api){
+  processApi = function(element, score_element, api){
     var text =  element.siblings(".tweet").children("a")[0].innerHTML;
 
     var expression = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
@@ -97,7 +101,7 @@
       $.each(links, function(index, value){ text = text.replace(value, "") });
     }
     text = text.replace(/#/g, "")
-    console.log(text);
+
     var base_url = "<%= IdolApiConfig["url"] %>/" + api + "/<%= IdolApiConfig["version"] %>"
     var url = base_url + "?apikey=" + "<%= IdolApiConfig["api_key"] %>" + "&text=" + text + "ex"
      
@@ -105,6 +109,7 @@
 
     $.getJSON(url, {}, function(result){
       if(api === "detectsentiment"){
+        score_element[0].innerHTML = (result.aggregate.score*100).toFixed(2) + "%";
         displayIcon(element, result.aggregate.sentiment)        
       }
       if(api === "identifylanguage"){
