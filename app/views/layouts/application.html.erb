@@ -7,21 +7,18 @@
   </head>
     
     
-  <body id="scroll">
-    
-      <%= render :partial => "layouts/header" %>
-      
-          
-      <% flash.each do |key, value| %>
-        <div class="alert <%= key %>">
-          <%= value %><a class="close" data-dismiss="alert" href="#">&times;</a>
-        </div>
-      <% end %>
-
-      <div id="content">
-        <%= yield %>
+  <body id="scroll">    
+    <%= render :partial => "layouts/header" %>
+        
+    <% flash.each do |key, value| %>
+      <div class="alert <%= key %>">
+        <%= value %><a class="close" data-dismiss="alert" href="#">&times;</a>
       </div>
-          
+    <% end %>
+
+    <div id="content">
+      <%= yield %>
+    </div>
     
   </body>
 </html>

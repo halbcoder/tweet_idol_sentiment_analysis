@@ -4,9 +4,13 @@ require 'twitter_api'
 class TweetsController < ApplicationController
 	include IdolApi
 	include TwitterApi
+
+	TWEET_COUNT = 100
 	
 	def index
-		@tweets = search_tweets(params[:hashtag], param_values(params)).take(25)
+		# Configure the number of tweets to be fetched in the TWEET_COUNT.
+		# Set the max_id value (last tweet's id) and use it to get the next set of tweets.
+		@tweets = search_tweets(params[:hashtag], param_values(params)).take(TWEET_COUNT)
 	end
 
 	def show
@@ -14,11 +18,13 @@ class TweetsController < ApplicationController
 		@language = JSON.parse identify_language(@tweet.text)
 		@sentiment = JSON.parse detect_sentiment(@tweet.text, @language)
 		
+		# Positive terms in the tweet
 		@positive_terms = @sentiment["positive"].sort_by{ |hsh| hsh["score"] }.reverse
 		positive_sentiment_terms = @positive_terms.collect{ |hsh| hsh["sentiment"] }		
 		@pos_highlighted_tweet = JSON.parse(highlight_text(
 			@tweet.text, positive_sentiment_terms, "<span class='pos_highlight'>"))
 		
+		# Negative terms in the tweet
 		@negative_terms = @sentiment["negative"].sort_by{ |hsh| hsh["score"] }.reverse
 		negative_sentiment_terms = @negative_terms.collect{ |hsh| hsh["sentiment"] }
 		@neg_highlighted_tweet = JSON.parse(highlight_text(
@@ -30,7 +36,7 @@ class TweetsController < ApplicationController
 			{
 				:since_date => start_date(params),
 				:until_date => end_date(params),
-				:max_id => params[:max_id],
+				:max_id => params[:max_id],  # This param fetches tweets older than the given tweet ID
 				:include_rts => params[:include_rts]
 			}
 		end

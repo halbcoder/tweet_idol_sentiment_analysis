@@ -63692,3 +63692,520 @@ Served asset /application.js - 304 Not Modified (0ms)
 Connecting to database specified by database.yml
 Connecting to database specified by database.yml
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-22 23:14:35 +0530
+Processing by TweetsController#index as HTML
+  Rendered tweets/index.html.erb within layouts/application (77.5ms)
+Compiled flat-ui.css  (1ms)  (pid 72337)
+Warning. Error encountered while saving cache /Users/vijayarajmurugesan/development/tweet_idol_sentiment_analysis/tmp/cache/sass/60e5b1c31f3fae88f30ccf5df04a4ab677d4df57/app_custom.scssc: can't dump anonymous class #<Class:0x007fa90b9ee7e0>
+Compiled app_custom.css  (74ms)  (pid 72337)
+Warning. Error encountered while saving cache /Users/vijayarajmurugesan/development/tweet_idol_sentiment_analysis/tmp/cache/sass/60e5b1c31f3fae88f30ccf5df04a4ab677d4df57/application.scssc: can't dump anonymous class #<Class:0x007fa90b9ee7e0>
+Compiled application.css  (5ms)  (pid 72337)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 2865ms (Views: 475.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-07-22 23:14:38 +0530
+Served asset /bootstrap.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/flat-ui.css?body=1" for 127.0.0.1 at 2014-07-22 23:14:38 +0530
+Served asset /flat-ui.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2014-07-22 23:14:38 +0530
+Served asset /select2.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/simplePagination.css?body=1" for 127.0.0.1 at 2014-07-22 23:14:38 +0530
+Served asset /simplePagination.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/ui.daterangepicker.css?body=1" for 127.0.0.1 at 2014-07-22 23:14:38 +0530
+Served asset /ui.daterangepicker.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/app_custom.css?body=1" for 127.0.0.1 at 2014-07-22 23:14:38 +0530
+Served asset /app_custom.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-22 23:14:39 +0530
+Served asset /application.css - 304 Not Modified (18ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-22 23:14:39 +0530
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-22 23:14:39 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.validate.js?body=1" for 127.0.0.1 at 2014-07-22 23:14:39 +0530
+Served asset /jquery.validate.js - 304 Not Modified (30ms)
+
+
+Started GET "/assets/date.js?body=1" for 127.0.0.1 at 2014-07-22 23:14:39 +0530
+Served asset /date.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-22 23:14:39 +0530
+Served asset /bootstrap.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/daterangepicker.jQuery.js?body=1" for 127.0.0.1 at 2014-07-22 23:14:39 +0530
+Served asset /daterangepicker.jQuery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-22 23:14:39 +0530
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery-ui-1.9.2.custom.js?body=1" for 127.0.0.1 at 2014-07-22 23:14:39 +0530
+Served asset /jquery-ui-1.9.2.custom.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.cookie.js?body=1" for 127.0.0.1 at 2014-07-22 23:14:39 +0530
+Served asset /jquery.cookie.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:51 +0530
+Served asset /neutral.png - 304 Not Modified (3ms)
+
+
+Started GET "/assets/positive.png" for 127.0.0.1 at 2014-07-22 23:14:51 +0530
+Served asset /positive.png - 304 Not Modified (1ms)
+
+
+Started GET "/assets/negative.png" for 127.0.0.1 at 2014-07-22 23:14:51 +0530
+Served asset /negative.png - 304 Not Modified (1ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:52 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/negative.png" for 127.0.0.1 at 2014-07-22 23:14:52 +0530
+Served asset /negative.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:52 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/positive.png" for 127.0.0.1 at 2014-07-22 23:14:52 +0530
+Served asset /positive.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:52 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:52 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:53 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:53 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:53 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:53 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:53 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:53 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:53 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:53 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:54 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:54 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:54 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:54 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:54 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:55 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:55 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:55 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:55 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:56 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:56 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:56 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:56 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/positive.png" for 127.0.0.1 at 2014-07-22 23:14:57 +0530
+Served asset /positive.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:57 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:57 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:57 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/positive.png" for 127.0.0.1 at 2014-07-22 23:14:57 +0530
+Served asset /positive.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:57 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/positive.png" for 127.0.0.1 at 2014-07-22 23:14:58 +0530
+Served asset /positive.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:58 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:58 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/positive.png" for 127.0.0.1 at 2014-07-22 23:14:58 +0530
+Served asset /positive.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:58 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:58 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:59 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:59 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:59 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:59 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:59 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:14:59 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/positive.png" for 127.0.0.1 at 2014-07-22 23:15:00 +0530
+Served asset /positive.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:15:00 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:15:00 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:15:00 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:15:00 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:15:00 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:15:00 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:15:01 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/positive.png" for 127.0.0.1 at 2014-07-22 23:15:01 +0530
+Served asset /positive.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/positive.png" for 127.0.0.1 at 2014-07-22 23:15:01 +0530
+Served asset /positive.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:15:01 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:15:01 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:15:02 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/negative.png" for 127.0.0.1 at 2014-07-22 23:15:02 +0530
+Served asset /negative.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:15:02 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/negative.png" for 127.0.0.1 at 2014-07-22 23:15:02 +0530
+Served asset /negative.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:15:02 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:15:02 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:15:02 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/positive.png" for 127.0.0.1 at 2014-07-22 23:15:03 +0530
+Served asset /positive.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:15:03 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:15:03 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:15:03 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:15:03 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:15:03 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/positive.png" for 127.0.0.1 at 2014-07-22 23:15:04 +0530
+Served asset /positive.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:15:04 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:15:04 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:15:04 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/positive.png" for 127.0.0.1 at 2014-07-22 23:15:04 +0530
+Served asset /positive.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:15:04 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:15:05 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:15:05 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:15:05 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:15:05 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:15:05 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:15:05 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:15:05 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:15:06 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/negative.png" for 127.0.0.1 at 2014-07-22 23:15:06 +0530
+Served asset /negative.png - 304 Not Modified (0ms)
+
+
+Started GET "/tweets/491371452881711105" for 127.0.0.1 at 2014-07-22 23:15:15 +0530
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"491371452881711105"}
+  Rendered tweets/show.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 10144ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-07-22 23:15:25 +0530
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/app_custom.css?body=1" for 127.0.0.1 at 2014-07-22 23:15:25 +0530
+Served asset /app_custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui.daterangepicker.css?body=1" for 127.0.0.1 at 2014-07-22 23:15:25 +0530
+Served asset /ui.daterangepicker.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/simplePagination.css?body=1" for 127.0.0.1 at 2014-07-22 23:15:25 +0530
+Served asset /simplePagination.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/flat-ui.css?body=1" for 127.0.0.1 at 2014-07-22 23:15:25 +0530
+Served asset /flat-ui.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2014-07-22 23:15:25 +0530
+Served asset /select2.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-22 23:15:25 +0530
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-22 23:15:25 +0530
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-22 23:15:25 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.9.2.custom.js?body=1" for 127.0.0.1 at 2014-07-22 23:15:25 +0530
+Served asset /jquery-ui-1.9.2.custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.cookie.js?body=1" for 127.0.0.1 at 2014-07-22 23:15:25 +0530
+Served asset /jquery.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.validate.js?body=1" for 127.0.0.1 at 2014-07-22 23:15:25 +0530
+Served asset /jquery.validate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-22 23:15:25 +0530
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/date.js?body=1" for 127.0.0.1 at 2014-07-22 23:15:25 +0530
+Served asset /date.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/daterangepicker.jQuery.js?body=1" for 127.0.0.1 at 2014-07-22 23:15:25 +0530
+Served asset /daterangepicker.jQuery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-22 23:15:25 +0530
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:15:25 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/neutral.png" for 127.0.0.1 at 2014-07-22 23:15:32 +0530
+Served asset /neutral.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/positive.png" for 127.0.0.1 at 2014-07-22 23:15:32 +0530
+Served asset /positive.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/negative.png" for 127.0.0.1 at 2014-07-22 23:15:32 +0530
+Served asset /negative.png - 304 Not Modified (0ms)
