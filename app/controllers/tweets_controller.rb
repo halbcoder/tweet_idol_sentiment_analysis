@@ -12,7 +12,7 @@ class TweetsController < ApplicationController
 	def show
 		@tweet = fetch_tweet(params[:id])
 		@language = JSON.parse identify_language(@tweet.text)
-		@sentiment = JSON.parse detect_sentiment(@tweet.text)
+		@sentiment = JSON.parse detect_sentiment(@tweet.text, @language)
 		
 		@positive_terms = @sentiment["positive"].sort_by{ |hsh| hsh["score"] }.reverse
 		positive_sentiment_terms = @positive_terms.collect{ |hsh| hsh["sentiment"] }		
